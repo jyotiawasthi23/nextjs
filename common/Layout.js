@@ -4,17 +4,17 @@ import Navbar  from "./Navbar";
 import Footer from "./Footer";
 
 const Layout = (props) =>{
-    const {children,footerStatus}= props;
-    console.log('footerStatus', footerStatus);
+    const {children,footerStatus,headerStatus}= props;
+
 return(
     <>
     { true ?
     (<div>
-    <Header/>
+    {!headerStatus && (<Header/>)}
     {children}
     {!footerStatus && (<Footer/>)}
     </div>) :  (<div>
-    <Header/>
+    {!headerStatus && (<Header/>)}
     {children}
     {!footerStatus && (<Footer/>)}
     </div>)}

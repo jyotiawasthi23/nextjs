@@ -1,0 +1,36 @@
+.login,.registerPage{
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    background: #414040;
+ 
+    .loginPage{
+        padding: 2rem 5rem;
+        width: 500px;
+        margin: auto;
+    }
+    .btn{
+        background: #2a2a2a;
+    color: #fff;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 15px;
+    }
+}
+.registerPage{
+    display: grid;
+    justify-content: end;
+    .loginPage{
+        height: auto;
+    }
+}
+.login{
+    .loginPage{
+        height: 370px;
+    }
+}

@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image/";
 import styles from '../styles/Product.module.css'
+
+//SSG (static site genration ---Html pages are built inintalliy)
 export const getStaticProps = async () => {
     const response = await fetch('https:\\fakestoreapi.com/products');
     const data = await response.json();
@@ -22,12 +24,13 @@ const Products = (props) => {
 
                         <div className="col-3">
                             <div className="productList mb-3">
-                                <div class="card p-2" >
+                                <div className="card p-2" >
                                     <div className="text-center">
-                                        <Image src={item.image} width={200}
-                                            height={200} className={styles.image} />
+                                    <img className={styles.image}  height="200" src={item.image} title="Product Image" alt="Product Image"  />
+                                        {/* <Image src={item.image} width={200}
+                                            height={200} className={styles.image} /> */}
                                     </div>
-                                    <div class="card-body pb-0">
+                                    <div className="card-body pb-0">
                                         <h5 className={styles.cardTitle}>{item.title}</h5>
                                           <p className={styles.cardText}>{item.category}</p>
                                         <p className={styles.cardText}>{item.description}</p>
@@ -36,11 +39,7 @@ const Products = (props) => {
                                     </div>
                                 </div>
 
-                                {/* <Image src={item.image}  width={100} height={100}/>
-                    <div> {item.category}</div>
-                    <div> {item.title}</div>
-                    <div> {item.price}</div>
-                    <div>{item.description}</div> */}
+   
                             </div>
                         </div>
 

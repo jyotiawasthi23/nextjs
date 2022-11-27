@@ -9,7 +9,7 @@ import Bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 function MyApp({ Component, pageProps }) {
   console.log('pageProps',pageProps);
   return (
-    <Layout footerStatus={pageProps.footerstatus}>
+    <Layout headerStatus={pageProps.headerStatus} footerStatus={pageProps.footerstatus}>
       <Component {...pageProps} />
     </Layout>
   )
